@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigComponent implements OnInit {
 
-  config = 'initial config';
-  
+  config: Config = {
+    backendUrl: "http://localhost:8080/back",
+    debug: true
+  };
+
   constructor() { }
 
   ngOnInit() {
