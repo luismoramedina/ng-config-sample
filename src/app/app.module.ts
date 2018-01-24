@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ConfigComponent } from './config/config.component';
 import { ConfigService } from './config/config.service';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { ConfigService } from './config/config.service';
     ConfigComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

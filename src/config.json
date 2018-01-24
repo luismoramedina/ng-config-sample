@@ -1,0 +1,4 @@
+{
+  "backendUrl": "http://from-config.json/back",
+  "debug": false
+}

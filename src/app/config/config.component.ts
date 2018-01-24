@@ -10,11 +10,17 @@ import { ConfigService } from './config.service';
 })
 export class ConfigComponent implements OnInit {
 
-  config = this.configService.getConfig();
+  config = new Config();
 
   constructor(private configService: ConfigService) { }
 
   ngOnInit() {
+    this.getConfig();
+  }
+
+  getConfig(): void {
+      this.configService.getConfig()
+        .subscribe(config => this.config = config);
   }
 
 }
