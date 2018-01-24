@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Config } from './config';
+import { ConfigService } from './config.service';
 
 
 @Component({
@@ -8,12 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigComponent implements OnInit {
 
-  config: Config = {
-    backendUrl: "http://localhost:8080/back",
-    debug: true
-  };
+  config = this.configService.getConfig();
 
-  constructor() { }
+  constructor(private configService: ConfigService) { }
 
   ngOnInit() {
   }

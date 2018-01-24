@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ConfigComponent } from './config/config.component';
+import { ConfigService } from './config/config.service';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { ConfigComponent } from './config/config.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
